@@ -76,9 +76,9 @@ def main():
     while(True):
         user_name = input("Qual o nome de usuário? ")
         if user_registered(user_name):
+            token = int(input("Seja bem vindo de volta! Qual seu token numérico de 6 dígitos? "))
             token_list = generate_tokens(user_name)
             print("DEBUG: Os tokens válidos são:", ', '.join(str(num) for num in token_list))
-            token = int(input("Seja bem vindo de volta! Qual seu token numérico de 6 dígitos? "))
 
             if token not in token_list:
                 print("Token inválido. Tente novamente.")
