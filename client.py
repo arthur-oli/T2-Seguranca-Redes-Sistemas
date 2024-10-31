@@ -27,7 +27,6 @@ def add_user(name, local_password_hash, seed_hash, salt_hash):
         session.rollback()
         print("Erro: O usuário com essa seed já está registrado. Por favor, escolha outra semente.")
 
-
 def is_password_correct(name, local_password_hash):
     user = session.get(User, name)
     if user.local_password == local_password_hash:
